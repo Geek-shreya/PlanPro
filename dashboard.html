@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="task-manager">
+        <!-- left bar starts -->
+        <div class="left-bar">
+            <div class="upper-part">
+                <div class="actions">
+                    <div class="circles"></div>
+                        <div class="circle2"></div>
+                </div>
+            </div>
+            
+            <!-- left content starts -->
+            <div class="left-content">
+                <ul class="actions-list">
+                    <li class="item">
+                        <span class="fa fa-folder-open-o"> Inbox</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-star-o"> Today</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-calendar">Upcoming</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-thumb-tack">Important</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-user-plus">Meetings</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-trash-o">Trash</span>
+                    </li>
+                </ul>
+
+                <ul class="category-list">
+                    <li class="item">
+                        <span class="fa fa-group">Family</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-sun-o">Vacation</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-snowflake-o">Festival</span>
+                    </li>
+
+                    <li class="item">
+                        <span class="fa fa-bolt">Concerts</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- left content ends -->
+        </div>
+            <!-- left bar ends -->
+
+            <!-- page content starts -->
+            <div class="page-content">
+                <div class="header">Today Task </div>
+                 <!-- content category starts  -->
+                <div class="content-categories">
+                    <div class="label-wrapper">
+                        <input type="radio" name="nav" id="opt-1" class="nav-item"/>
+                        <label class="category" for="opt-1">All</label>
+                    </div>
+
+                    <div class="label-wrapper">
+                        <input type="radio" name="nav" id="opt-2" class="nav-item"/>
+                        <label class="category" for="opt-2">Important</label>
+                    </div>
+
+                    <div class="label-wrapper">
+                        <input type="radio" name="nav" id="opt-3" class="nav-item"/>
+                        <label class="category" for="opt-3">Notes</label>
+                    </div>
+
+                    <div class="label-wrapper">
+                        <input type="radio" name="nav" id="opt-4" class="nav-item"/>
+                        <label class="category" for="opt-4">Links</label>
+                    </div>
+
+                    <div class="label-wrapper">
+                        <input type="radio" name="nav" id="opt-5" class="nav-item"/>
+                        <label class="category" for="opt-5">Whiteboard</label>
+                    </div>
+                </div>
+                <!-- content category ends -->
+
+                <!-- task wrapper starts -->
+                <div class="task-wrapper">
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-1" class="task-item" checked/>
+                        <label for="item-1">
+                            <span class="label-text">Dashboard Design Implementation</span>
+                        </label>
+                        <span class="tag approved">Approved</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-2" class="task-item" checked/>
+                        <label for="item-2">
+                            <span class="label-text">Create a user flow</span>
+                        </label>
+                        <span class="tag progress">In Progress</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-3" class="task-item" />
+                        <label for="item-3">
+                            <span class="label-text">Application Implementation</span>
+                        </label>
+                        <span class="tag review">In Review</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-4" class="task-item" />
+                        <label for="item-4">
+                            <span class="label-text">Create a Dashboard Design</span>
+                        </label>
+                        <span class="tag progress">In Progress</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-5" class="task-item" />
+                        <label for="item-5">
+                            <span class="label-text">Create a Web Application Design</span>
+                        </label>
+                        <span class="tag approved">Approved</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-6" class="task-item" />
+                        <label for="item-6">
+                            <span class="label-text">Interactive Design</span>
+                        </label>
+                        <span class="tag review">In Review</span>
+                    </div>
+                    <div class="header upcoming">Upcoming Tasks </div>
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-7" class="task-item" />
+                        <label for="item-7">
+                            <span class="label-text"> Dashboard Design Implementation</span>
+                        </label>
+                        <span class="tag waiting">Waiting</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-8" class="task-item" />
+                        <label for="item-8">
+                            <span class="label-text">Create a User Flow</span>
+                        </label>
+                        <span class="tag waiting">waiting</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-9" class="task-item" />
+                        <label for="item-9">
+                            <span class="label-text">Application Implimentation</span>
+                        </label>
+                        <span class="tag waiting">Waiting</span>
+                    </div>
+
+                    <div class="task">
+                        <input type="checkbox" name="task" id="item-10" class="task-item" />
+                        <label for="item-10">
+                            <span class="label-text">Create a Dashboard Design</span>
+                        </label>
+                        <span class="waiting">Waiting</span>
+                    </div>
+                </div>
+                <!-- task wrapper ends -->
+            </div>
+            <!-- page content ends -->
+
+            <!-- right bar starts -->
+            <div class="right-bar">
+                <div class="top-part">
+                    <span class="fa fa-user-circle" id="n_user"></span>
+                    <div class="count">6</div>
+                </div>
+
+                <div class="header">Schedule</div>
+                <div class="right-content">
+                    <div class="task-box yellow">
+                        <div class="description-task">
+                            <div class="time">08:00 - 09:00 AM</div>
+                            <div class="task-name">Product Review</div>
+                        </div>
+                        <div class="more-button"></div>
+                            <div class="members">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3nfgY4fSBKTxsiCxQn4EID2Ws285xxc-7aQ&usqp=CAU" alt="member"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQCUecve2ZMT__2xNmpUEkGB2ZduvbxF3Z2g&usqp=CAU" alt="member-2"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQadzeS41vONIfTEWPgkhrALgZ31RSwdba_AA&usqp=CAU" alt="member-3"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjEBX25vS_VcOkgBzy-Z2fAs8DvF4unmIEBQ&usqp=CAU" alt="member-4"/>
+                            </div>
+                    </div>
+
+                    <div class="task-box blue">
+                        <div class="description-task">
+                            <div class="time">10:00 - 11:00 AM</div>
+                            <div class="task-name">Design Meeting</div>
+                        </div>
+                        <div class="more-button"></div>
+                            <div class="members">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGP0LOh8SpUJCGgsBxnYVT1lvY4DNW_f_lBA&usqp=CAU" alt="member"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86iGW9FJ7AmGwI9IEvnuxlbAuirQC0TM_fQ&usqp=CAU" alt="member-2"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV3oH0wF0XTQsV16fj6-fi4NFohnHYc3cq9A&usqp=CAU" alt="member-3"/>
+                            </div>
+                    </div>
+
+                    <div class="task-box red">
+                        <div class="description-task">
+                            <div class="time">01:00 - 02:00 PM</div>
+                            <div class="task-name">Team Meeting</div>
+                        </div>
+                        <div class="more-button"></div>
+                            <div class="members">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRspS_ukYMLvsWX4vPkC7PcTiCqJYIASaWapw&usqp=CAU" alt="member"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-FEAHPOAH9xbh1kGT9vB0O_Odfv3mp3iJTQ&usqp=CAU" alt="member-2"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJSGCuNrqf8yz5uGjXWZF9MW_Zhul6NSIDMQ&usqp=CAU" alt="member-3"/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5UpuYEzRP-Kr4becc6UQkYEm0FeCyuzVueKEJgCXpE9ierszDN9to11_c9cNRyHIFEUQ&usqp=CAU" alt="member-4"/>
+                            </div>
+                        </div>
+
+                        <div class="task-box green">
+                            <div class="description-task">
+                                <div class="time">03:00 - 04:00 PM</div>
+                                <div class="task-name">Team Meeting</div>
+                            </div>
+                            <div class="more-button"></div>
+                                <div class="members">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKtRx-C1LRke9CP50FZWePev15DJ7YFJpUw&usqp=CAU" alt="member"/>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVZTO8895YuxtPj_xrDo9WFL6oTfdoeRLLA&usqp=CAU" alt="member-2"/>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4jyoa0xjpJVFp0r0LmvD5txJ4s41aP7Xn0Q&usqp=CAU" alt="member-3"/>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRujp7i4MsIeZMk4xHKex9NFdDXe70c73ClKA&usqp=CAU" alt="member-4"/>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnngxCpo8jS7WE_uNWmlP4bME_IZkXWKYMzhM2Qi1JE_J-l_4SZQiGclMuNr4acfenazo&usqp=CAU" alt="member-5"/>
+                                </div>
+                            </div>
+
+                            <div class="task-box blue">
+                                <div class="description-task">
+                                    <div class="time">08:00 - 09:00 PM</div>
+                                    <div class="task-name">Release Event</div>
+                                </div>
+                                <div class="more-button"></div>
+                                    <div class="members">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmbUuWihp-5UzW1IcdPsb5C1lsGzjExUgwkQ&usqp=CAU" alt="member"/>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYe2yL46y6qNFOFrt00PhDuEPg7r6yJZkAxw&usqp=CAU" alt="member-2"/>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMMtFYTiNMX8K6PEwAH0wMemlp2G2DWG4I7A&usqp=CAU" alt="member-3"/>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkG8AI0bluznElO_1LHly2yhDkNwDlozC6zA&usqp=CAU" alt="member-4"/>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5-wOfms2RXkdjTHmPxz44pTl4cIbRb_2tFg&usqp=CAU" alt="member-5"/>
+                                    </div>
+                                </div>
+
+                                <div class="task-box yellow">
+                                    <div class="description-task">
+                                        <div class="time">11:00 - 12:00 PM</div>
+                                        <div class="task-name">Release Event</div>
+                                    </div>
+                                    <div class="more-button"></div>
+                                        <div class="members">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2kMLJq1Pqc1Z_rebo235x4YyJuC0luJZUCQ&usqp=CAU" alt="member"/>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKRVTXjnVc3FBgGjnOqDqDL2Fb9X1yAv16Gg&usqp=CAU" alt="member-2"/>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc0fMjOVJf0_sIIIWfeEnaidbibryNOhOGVQ&usqp=CAU" alt="member-3"/>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalXmLejwMeXC8Hb1wY0Vx7tSYCpcEpzLvrg&usqp=CAU" alt="member-4"/>
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+            <!-- right bar ends -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whiteboard</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+      }
+      
+      #whiteboard {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+      #canvas {
+        width: 100%;
+        height: 100%;
+        cursor: crosshair;
+      }
+      
+      #controls {
+        margin-top: 10px;
+        text-align: center;
+      }
+      
+      #clear-button {
+        background-color: #ff5252;
+        color: beige;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      
+      #color {
+        margin-right: 10px;
+      }
+      
+      #pen-size {
+        width: 100px;
+      }
+      
+  </style>
+</head>
+<body>
+  <div id="whiteboard">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div id="controls">
+    <button id="clear-button">Clear</button>
+    <input type="color" id="color" name="color">
+    <input type="range" id="pen-size" name="pen-size" min="-10" max="20" value="8">
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const clearButton = document.getElementById('clear-button');
+        const colorPicker = document.getElementById('color');
+        const penSizeInput = document.getElementById('pen-size');
+        let isDrawing = false;
+      
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+        clearButton.addEventListener('click', clearCanvas);
+      
+        function startDrawing(event) {
+          isDrawing = true;
+          draw(event);
+        }
+      
+        function draw(event) {
+          if (!isDrawing) return;
+          const x = event.clientX - canvas.offsetLeft;
+          const y = event.clientY - canvas.offsetTop;
+          const penSize = penSizeInput.value;
+          context.lineWidth = penSize;
+          context.lineCap = 'round';
+          context.strokeStyle = colorPicker.value;
+          context.lineTo(x, y);
+          context.stroke();
+          context.beginPath();
+          context.moveTo(x, y);
+        }
+      
+        function stopDrawing() {
+          isDrawing = false;
+          context.beginPath();
+        }
+      
+        function clearCanvas() {
+          context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      });
+      
+  </script>
+</body>
+</html>

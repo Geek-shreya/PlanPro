@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        /* Reset some default styles */
+body, h1, h2, p, ul, li, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #522752;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.notes-list {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 400px;
+}
+
+.note-form {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #9b529b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Notes</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="notes-list">
+                <!-- Notes will appear here -->
+            </div>
+            <div class="note-form">
+                <h2>Add a Note</h2>
+                <textarea id="note-text" placeholder="Enter your note here..."></textarea>
+                <button id="add-note">Add Note</button>
+                <button id="clear-notes">Clear Note</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const notesList = document.querySelector(".notes-list");
+            const noteText = document.querySelector("#note-text");
+            const addNoteButton = document.querySelector("#add-note");
+        
+            addNoteButton.addEventListener("click", function () {
+                const text = noteText.value.trim();
+                if (text !== "") {
+                    const note = document.createElement("div");
+                    note.classList.add("note");
+                    note.innerHTML = `<p>${text}</p>`;
+                    notesList.appendChild(note);
+                    noteText.value = "";
+                }
+
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const notesList = document.querySelector(".notes-list");
+            const noteText = document.querySelector("#note-text");
+            const addNoteButton = document.querySelector("#add-note");
+            const clearNotesButton = document.querySelector("#clear-notes");
+        
+            addNoteButton.addEventListener("click", function () {
+                const text = noteText.value.trim();
+                if (text !== "") {
+                    const note = document.createElement("div");
+                    note.classList.add("note");
+                    note.innerHTML = `
+                        <p>${text}</p>
+                        <button id="clear-notes">Delete</button>
+                    `;
+                    notesList.appendChild(note);
+                    noteText.value = "";
+        
+                    // Add event listener for the delete button
+                    const deleteButton = note.querySelector(".clear-notes");
+                    deleteButton.addEventListener("click", function () {
+                        note.remove();
+                    });
+                }
+            });
+        
+            clearNotesButton.addEventListener("click", function () {
+                // Remove all notes
+                while (notesList.firstChild) {
+                    notesList.removeChild(notesList.firstChild);
+                }
+            });
+        });
+        
+        
+    </script>
+</body>
+</html>
